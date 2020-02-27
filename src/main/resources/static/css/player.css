@@ -63,7 +63,7 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    background: url('../images/songs/choubaguai.jpg') no-repeat center;
+    background: url('../img/songs/choubaguai.jpg') no-repeat center;
     background-size: 100%;
     left: 0;
     top: 0;
@@ -79,7 +79,7 @@
     float: left;
     width: 130px;
     height: 130px;
-    background: url(../images/cd.png) no-repeat center;
+    background: url(../img/cd.png) no-repeat center;
     background-size: 100%;
     position: relative;
 }

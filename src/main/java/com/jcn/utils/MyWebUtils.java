@@ -13,10 +13,7 @@ public class MyWebUtils {
         if ((str == null) || (str.length() <= 0)){
             return false;
         }
-        //是非法字符串
-        if(! str.matches("[a-zA-Z0-9_\u4e00-\u9fa5]*")){
-            return false;
-        }
+
         //字符串有效
         return true;
     }

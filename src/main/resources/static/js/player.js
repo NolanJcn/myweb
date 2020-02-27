@@ -29,21 +29,21 @@ class Musics {
                 title: 'Driving Home for Christmas',
                 singer: 'Campsite Dream',
                 songUrl: './songs/song.mp3',
-                imageUrl: './images/songs/c.jpg'
+                imageUrl: './img/songs/c.jpg'
             },
             {
                 id: 2,
                 title: '认真的雪',
                 singer: '薛之谦',
                 songUrl: './songs/song.mp3',
-                imageUrl: './images/songs/renzhendexue.jpg'
+                imageUrl: './img/songs/renzhendexue.jpg'
             },
             {
                 id: 3,
                 title: '演员',
                 singer: '薛之谦',
                 songUrl: './songs/song.mp3',
-                imageUrl: './images/songs/yanyuan.jpg'
+                imageUrl: './img/songs/yanyuan.jpg'
             }
         ]
     }
