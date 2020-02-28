@@ -1,14 +1,14 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
 <html>
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./fonts/iconfont.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="./css/reset.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="./css/player.css" />
-    
+    <link rel="stylesheet" th:href="@{/fonts/iconfont.css}">
+    <link rel="stylesheet" type="text/css" media="screen" th:href="@{/css/reset.css}">
+    <link rel="stylesheet" type="text/css" media="screen" th:href="@{/css/player.css}">
 </head>
 <body>
     <!-- 播放器 -->
@@ -23,10 +23,10 @@
             <div class="music-player__disc">
                 <!-- 唱片图片 -->
                 <div class="music-player__image">
-                    <img width="100%" src="" alt="">
+                    <img width="100%" th:src="" alt="">
                 </div>
                 <!-- 指针 -->
-                <div class="music-player__pointer"><img width="100%" src="./img/cd_tou.png" alt=""></div>
+                <div class="music-player__pointer"><img width="100%" th:src="@{/img/cd_tou.png}" alt=""></div>
             </div>
             <!-- 控件主体 -->
             <div class="music-player__controls">
@@ -49,7 +49,6 @@
                             <div class="control__volume--progress progress"></div>
                         </div>
                     </div>
-
                     <!-- 歌曲播放进度 -->
                     <div class="player-control__content">
                         <div class="player__song--progress progress"></div>
@@ -70,10 +69,8 @@
             </ul>
         </div>
     </div>
-
-    <script src="js/utill.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/player.js"></script>
-	
+    <script th:src="@{/js/utill.js}"></script>
+    <script th:src="@{/js/jquery.min.js}"></script>
+    <script th:src="@{/js/player.js}"></script>
 </body>
 </html>

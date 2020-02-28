@@ -3,39 +3,18 @@
 <head>
     <title>注册</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-    <!-- jquery -->
-    <!-- thymeleaf引入静态文件要加@{/路径} -->
     <script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
-    <!-- bootstrap -->
     <link rel="stylesheet" type="text/css" th:href="@{/bootstrap/css/bootstrap.min.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/register.css}" />
     <script type="text/javascript" th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
-    <!-- jquery-validator -->
     <script type="text/javascript" th:src="@{/jquery-validation/jquery.validate.min.js}"></script>
     <script type="text/javascript" th:src="@{/jquery-validation/localization/messages_zh.min.js}"></script>
-    <!-- layer -->
     <script type="text/javascript" th:src="@{/layer/layer.js}"></script>
     <script type="text/javascript" th:src="@{/js/register.js}"></script>
-
-    <style type="text/css">
-        html,body{
-            height:100%;
-            width:100%;
-        }
-        body{
-            background:url('/img/000.jpg') no-repeat;
-            background-size:100% 100%;
-            padding-top:100px;
-        }
-    </style>
-
 </head>
 <body>
-
 <form name="registerForm" id="registerForm"  method="post"  style="width:30%; margin:0 auto;">
-
     <h2 style="text-align:center; margin-bottom: 20px"><a style="color: ghostwhite">&nbsp;&nbsp;注册web小屋</a></h2>
-
     <div class="form-group">
         <div class="row">
             <label class="form-label col-md-4"><a style="color: ghostwhite">请输入账号</a></label>
@@ -46,7 +25,6 @@
             </div>
         </div>
     </div>
-
     <div class="form-group">
         <div class="row">
             <label class="form-label col-md-4"><a style="color: ghostwhite">请输入密码</a></label>
@@ -55,7 +33,6 @@
             </div>
         </div>
     </div>
-
     <div class="form-group">
         <div class="row">
             <label class="form-label col-md-4"><a style="color: ghostwhite">请输入昵称</a></label>
@@ -64,7 +41,6 @@
             </div>
         </div>
     </div>
-
     <div class="form-group">
         <div class="row">
             <label class="form-label col-md-4"><a style="color: ghostwhite">请输入邮箱</a></label>
@@ -73,8 +49,6 @@
             </div>
         </div>
     </div>
-
-
     <div class="row" style="margin-top:40px;">
         <div class="col-md-6">
             <button class="btn btn-primary btn-block" type="reset" onclick="reset()">重置</button>
@@ -84,6 +58,5 @@
         </div>
     </div>
 </form>
-
 </body>
 </html>

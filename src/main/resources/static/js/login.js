@@ -40,7 +40,7 @@ function doLogin(){
             if(data.code == 0){
                 layer.msg("登录成功！");
                 //成功则跳转
-                window.location.href="/tomusic";
+                window.location.href="/home/to_home";
             }else{
                 layer.msg(data.msg);
             }

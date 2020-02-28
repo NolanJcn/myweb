@@ -1,0 +1,9 @@
+html,body{
+    height:100%;
+    width:100%;
+}
+body{
+    background:url('/img/000.jpg') no-repeat;
+    background-size:100% 100%;
+    padding-top:100px;
+}
