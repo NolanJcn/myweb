@@ -43,4 +43,11 @@ class MywebApplicationTests {
     }
 
 
+    /*public static void main(String[] args) {
+        String s1 = "hello.java";
+        String s2 = "hello.png";
+        Boolean b = MyWebUtils.isPicFile(s2);
+        System.out.println(b);
+    }*/
+
 }

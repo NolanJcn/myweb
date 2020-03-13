@@ -2,21 +2,47 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>CSS3实现照片墙</title>
-<link th:href="@{/css/style.css}" type="text/css" rel="stylesheet">
+<title>图片查询</title>
+<link th:href="@{/css/picwall/style.css}" type="text/css" rel="stylesheet">
+<script type="text/javascript" th:src="@{/js/jquery-1.4.2.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/picwall/picwall.js}"></script>
 </head>
 <body>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a th:href="@{/home}">回到上一级</a>
+<div id="select1" style="text-align: center">
+	<form action="/picSelect" method="post">
+		<a>图片分类：</a>&nbsp;&nbsp;
+		<select name="pType" id="pType" class="select">
+			<option value="美女">******美女******</option>
+			<option value="风景">******风景******</option>
+			<option value="卡通">******卡通******</option>
+		</select>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a>口味选择：</a>&nbsp;&nbsp;
+		<select name="typeToType" id="typeToType" class="select">
+			<option pType="美女" value="性感">******性感******</option>
+			<option pType="美女" value="唯美">******唯美******</option>
+			<option pType="风景" value="科幻">******科幻******</option>
+			<option pType="风景" value="城镇">******城镇******</option>
+			<option pType="卡通" value="动漫">******动漫******</option>
+			<option pType="卡通" value="动画">******动画******</option>
+			<option pType="卡通" value="游戏">******游戏******</option>
+		</select>&nbsp;&nbsp;
+		<input type="submit" class="btn" value="查询">
+	</form>
+</div>
 <div class="container">
-	<img th:src="@{/img/mm1.jpg}" class="pic1"  />
-	<img th:src="@{/img/mm2.jpg}" class="pic2"  />
-	<img th:src="@{/img/mm3.jpg}" class="pic3"  />
-	<img th:src="@{/img/mm4.jpg}" class="pic4"  />
-	<img th:src="@{/img/mm5.jpg}" class="pic5"  />
-	<img th:src="@{/img/mm6.jpg}" class="pic6"  />
-	<img th:src="@{/img/mm7.jpg}" class="pic7"  />
-	<img th:src="@{/img/mm8.jpg}" class="pic8"  />
-	<img th:src="@{/img/mm9.jpg}" class="pic9"  />
-	<img th:src="@{/img/mm10.jpg}" class="pic10"  />
+	<ul th:each="mypic:${picSelectInfo.list}" style="text-align: center">
+		<img width="100" height="100" th:src="@{${mypic.picUrl}}"/>
+	</ul><br><br><br>
+	<ul class="pagination" style="text-align: center">
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<p><!--当前 <span style="color: red;font-weight: bold" th:text="${picSelectInfo.pageNum}"></span> 页,--><!--总 <span th:text="${picSelectInfo.pages}" style="color: red;font-weight: bold"></span> 页,-->共查询到 <span th:text="${picSelectInfo.total}" style="color: red;font-weight: bold"></span> 条记录，游客最多浏览10张图片，如需查看更多图片资源请联系站长 :）</p><br>
+		<!--<a class="page-link" th:href="@{/picwall}" style="color: black">第1页</a></li>
+		<a class="page-link" th:href="@{/picwall(pageNum=${picSelectInfo.hasPreviousPage}?${picSelectInfo.prePage}:1)}"  style="color: black;padding-left: 20px">上一页</a>
+		<a class="page-link" th:href="@{/picwall(pageNum=${picSelectInfo.hasNextPage}?${picSelectInfo.nextPage}:${picSelectInfo.pages})}"  style="color: black;padding-left: 20px">下一页</a>
+		<a class="page-link" th:href="@{/picwall(pageNum=${picSelectInfo.pages})}"  style="color: black;padding-left: 20px">尾页</a>-->
+	</ul>
 </div>
 </body>
 </html>

@@ -22,9 +22,9 @@ public class LoginController {
     private LoginServiceImpl loginService;
 
     //跳转登陆页面
-    @RequestMapping("/index")
+    @RequestMapping("/")
     public String toLogin(){
-        return "index";
+        return "login";
     }
 
     //登陆操作
@@ -34,8 +34,8 @@ public class LoginController {
 
         log.info(loginVo.toString());
 
-        String token = loginService.login(response,loginVo);
+        String result = loginService.login(response,loginVo);
 
-        return MywebResult.success(token);
+        return MywebResult.success(result);
     }
 }

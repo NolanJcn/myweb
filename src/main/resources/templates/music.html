@@ -1,16 +1,19 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
-<html>
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" th:href="@{/fonts/iconfont.css}">
-    <link rel="stylesheet" type="text/css" media="screen" th:href="@{/css/reset.css}">
-    <link rel="stylesheet" type="text/css" media="screen" th:href="@{/css/player.css}">
+    <link rel="stylesheet" type="text/css" media="screen" th:href="@{/css/music/reset.css}">
+    <link rel="stylesheet" type="text/css" media="screen" th:href="@{/css/music/player.css}">
 </head>
 <body>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a style="color: red" th:href="@{/home}">回到上一级</a>
     <!-- 播放器 -->
     <div class="music-player">
         <!-- audio标签 -->
@@ -23,10 +26,9 @@
             <div class="music-player__disc">
                 <!-- 唱片图片 -->
                 <div class="music-player__image">
-                    <img width="100%" th:src="" alt="">
+                    <img width="100%" src="" alt="">
                 </div>
-                <!-- 指针 -->
-                <div class="music-player__pointer"><img width="100%" th:src="@{/img/cd_tou.png}" alt=""></div>
+                <div class="music-player__pointer"><img width="100%" th:src="@{/img/songs/cd/cd_tou.png}" alt=""></div>
             </div>
             <!-- 控件主体 -->
             <div class="music-player__controls">
@@ -69,8 +71,8 @@
             </ul>
         </div>
     </div>
-    <script th:src="@{/js/utill.js}"></script>
     <script th:src="@{/js/jquery.min.js}"></script>
-    <script th:src="@{/js/player.js}"></script>
+    <script th:src="@{/js/music/utill.js}"></script>
+    <script th:src="@{/js/music/player.js}"></script>
 </body>
 </html>

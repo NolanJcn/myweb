@@ -32,6 +32,12 @@ public class MywebCodeMsg {
     public static MywebCodeMsg ACCT_NOT_EXIST = new MywebCodeMsg(205, "账号不存在");
     public static MywebCodeMsg PASSWORD_ERROR = new MywebCodeMsg(206, "密码错误");
     public static MywebCodeMsg REGISTER_ACCT_ERROR = new MywebCodeMsg(207, "该账号已经存在，请重新输入");
+    //图片上传模块30X
+    public static MywebCodeMsg PIC_NULL_ERROR = new MywebCodeMsg(301, "请选择图片后进行操作");
+    public static MywebCodeMsg PIC_FORMAT_ERROR = new MywebCodeMsg(302, "请选择正确图片格式的文件");
+    public static MywebCodeMsg PIC_TYPE_NULL_ERROR = new MywebCodeMsg(303, "请选择图片的类别后进行操作");
+    public static MywebCodeMsg PIC_NAME_NULL_ERROR = new MywebCodeMsg(304, "请为图片设置一个名称后进行操作");
+    public static MywebCodeMsg PIC_ERROR = new MywebCodeMsg(305, "图片上传失败，请重新选择进行上传");
 
     //参数异常。变参
     public MywebCodeMsg fillArgs(Object... args){

@@ -30,6 +30,6 @@ public class RegisterController {
 
         request.setAttribute("success","注册成功，正在为您跳转到登陆页面");
 
-        return "redirect:/index";
+        return "redirect:/";
     }
 }

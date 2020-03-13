@@ -1,3 +1,4 @@
+/*
 package com.jcn.redis.key.abstractkey;
 
 import com.jcn.redis.key.interfacekey.KeyPrefix;
@@ -28,3 +29,4 @@ public abstract class BasePrefix implements KeyPrefix {
         return className+":" + prefix;
     }
 }
+*/

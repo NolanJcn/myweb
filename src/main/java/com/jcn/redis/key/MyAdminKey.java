@@ -1,3 +1,4 @@
+/*
 package com.jcn.redis.key;
 
 import com.jcn.redis.key.abstractkey.BasePrefix;
@@ -17,3 +18,4 @@ public class MyAdminKey extends BasePrefix {
     public static MyAdminKey getByAcct = new MyAdminKey(0,"id");
 
 }
+*/

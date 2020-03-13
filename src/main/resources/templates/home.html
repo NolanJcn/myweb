@@ -1,11 +1,61 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+<meta http-equiv="Content-Type" content="multipart/form-data; charset=utf-8" />
+<link rel="stylesheet" type="text/css" th:href="@{/css/home/home.css}" />
+<script type="text/javascript" th:src="@{/js/jquery-1.4.2.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/home/home.js}"></script>
+<title>home</title>
 </head>
+<!--<script th:inline="javascript">
+    var msg = /*[[${uploadResult}]]*/
+    alert(msg);
+</script>-->
 <body>
-
+<div>
+	<div class="heartPic">
+		<p><a th:href="@{/tomusic}">听下音乐吧</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a th:href="@{/tovedio}">看下视频吧</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			点击-><a th:href="@{/picwall}" style="color: red;font-weight: bold">查找你喜欢的图片吧(点我)</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><br>
+		<ul>
+			<form action="/upload" method="post"  enctype="multipart/form-data">
+				<input type="file" name="file" id="file">
+				<select name="select" class="select">
+					<option>请选择图片分类</option>
+					<option value ="1">性感</option>
+					<option value ="2">唯美</option>
+					<option value="3">科幻</option>
+					<option value="4">城镇</option>
+					<option value="5">动漫</option>
+					<option value="6">动画</option>
+					<option value="7">游戏</option>
+					<option value="8">其他</option>
+				</select>&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="text" name="pname" class="itxt" placeholder="请设置图片名称">
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="submit" class="btn" value="上传">
+			</form>
+		</ul>
+		<ul>&nbsp;</ul>
+		<ul>&nbsp;</ul>
+		<ul th:each="mypic,picStat : ${pageInfo.list}">
+			<li>
+				<div class="in" >
+					<img width="100" height="100" th:src="@{${mypic.picUrl}}" />
+					<p class="pTxt"><a th:text="${mypic.picName}"></a></p>
+				</div>
+			</li>
+		</ul>
+		<ul class="pagination" >
+			<br><br><br><br><br><br><br><br><br><br><br><br>
+			<p>当前 <span style="color: red;font-weight: bold" th:text="${pageInfo.pageNum}"></span> 页,总 <span th:text="${pageInfo.pages}" style="color: red;font-weight: bold"></span> 页,共 <span th:text="${pageInfo.total}" style="color: red;font-weight: bold"></span> 条记录</p><br>
+			<li class="page-item"><a class="page-link" th:href="@{/home}" style="color: white">第1页</a></li>
+			<li class="page-item"><a class="page-link" th:href="@{/home(pageNum=${pageInfo.hasPreviousPage}?${pageInfo.prePage}:1)}"  style="color: white">上一页</a></li>
+			<li class="page-item"><a class="page-link" th:href="@{/home(pageNum=${pageInfo.hasNextPage}?${pageInfo.nextPage}:${pageInfo.pages})}"  style="color: white">下一页</a></li>
+			<li class="page-item"><a class="page-link" th:href="@{/home(pageNum=${pageInfo.pages})}"  style="color: white">尾页</a></li>
+		</ul>
+	</div>
+</div>
 </body>
 </html>

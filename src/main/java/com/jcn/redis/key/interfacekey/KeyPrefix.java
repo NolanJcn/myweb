@@ -1,3 +1,4 @@
+/*
 package com.jcn.redis.key.interfacekey;
 
 //定义Prefix前缀接口
@@ -11,3 +12,4 @@ public interface KeyPrefix {
     public String getPrefix();
 
 }
+*/

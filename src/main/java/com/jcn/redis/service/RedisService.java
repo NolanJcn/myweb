@@ -1,3 +1,4 @@
+/*
 package com.jcn.redis.service;
 
 import com.jcn.redis.key.interfacekey.KeyPrefix;
@@ -15,9 +16,11 @@ import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
 
+*/
 /**
  * 封装jedis的增删改查
- */
+ *//*
+
 @Configuration
 @Service
 public class RedisService extends CachingConfigurerSupport{
@@ -59,10 +62,12 @@ public class RedisService extends CachingConfigurerSupport{
         return realKey;
     }
 
-    /**
+    */
+/**
      * 获取单个对象
      * 通过jedisPool获取jedis对象,然后进行get,set操作
-     * */
+     * *//*
+
     public <T> T get(KeyPrefix keyPrefix , String key , Class<T> clazz){
 
         try{//连接池用完想要释放掉，所以使用try{}
@@ -78,9 +83,11 @@ public class RedisService extends CachingConfigurerSupport{
         }
     }
 
-    /**
+    */
+/**
      * 设置对象
-     * */
+     * *//*
+
     public <T> boolean set(KeyPrefix keyPrefix, String key, T value){
         try {
             //set操作需要将类型转化为string
@@ -106,9 +113,11 @@ public class RedisService extends CachingConfigurerSupport{
         }
     }
 
-    /**
+    */
+/**
      * 判断key是否存在
-     * */
+     * *//*
+
     public <T> boolean exists(KeyPrefix keyPrefix, String key) {
         try {
             return  getJedis().exists(getRealKey(keyPrefix,key));
@@ -117,9 +126,11 @@ public class RedisService extends CachingConfigurerSupport{
         }
     }
 
-    /**
+    */
+/**
      * 删除
-     * */
+     * *//*
+
     public boolean delete(KeyPrefix keyPrefix, String key) {
         try {
             //返回long类型数据
@@ -140,3 +151,4 @@ public class RedisService extends CachingConfigurerSupport{
     }
 
 }
+*/

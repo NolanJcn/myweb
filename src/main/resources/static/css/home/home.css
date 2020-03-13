@@ -1,0 +1,74 @@
+*{padding:0; margin:0;}
+ul,li{list-style:none;}
+body{
+    font:12px/20px "Microsoft Yahei","SimSun", Arial, sans-serif;
+    background-image: url("../../img/bg/home.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* heartPic */
+.heartPic{width:749px;height:630px;margin:60px auto 0 auto;}
+.heartPic ul{width:749px;}
+.heartPic ul li{float:left;width:100px;height:100px;padding:2px;cursor:pointer;}
+.heartPic ul li.on .in{position:relative;left:-50px;top:-50px;padding:5px 5px 20px 5px;background:#666;}
+.heartPic ul li .pTxt{display:none;width:100px;height:15px;text-align:center;color:#fff;overflow:hidden;}
+.heartPic .showDiv{display:block;}
+.btn{ background-color:#FFF; border:1px solid #CDCDCD;height:25px; width:70px;}
+
+.itxt{
+    height: 12px;
+    border: 1px solid #ccc;
+    padding: 7px 0px;
+    border-radius: 3px; /*css3属性IE不支持*/
+    padding-left:5px;
+}
+
+.select {
+    display: inline-block;
+    height: 25px;
+    width: 120px;
+    position: relative;
+    vertical-align: middle;
+    padding: 0;
+    overflow: hidden;
+    background-color: #fff;
+    color: #555;
+    border: 1px solid #aaa;
+    text-shadow: none;
+    border-radius: 4px;
+    transition: box-shadow 0.25s ease;
+    z-index: 2;
+}
+
+.select:hover {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.select:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: #ccc;
+    top: 14px;
+    right: 10px;
+    cursor: pointer;
+    z-index: -2;
+}
+.select select {
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.select select:focus {
+    outline: none;
+}
