@@ -3,3 +3,5 @@
 
 
 
+**技术选型：SpringBoot、Thymeleaf、Mybatis、Mysql、Redis。**
+
